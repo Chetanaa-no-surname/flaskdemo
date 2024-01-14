@@ -31,6 +31,11 @@ def results():
     return render_template("results.html", page=page)
 
 
+@app.route('/about')
+def about():
+    return render_template("about.html")
+
+
 def get_page(search_term):
     try:
         page = wikipedia.page(search_term)
